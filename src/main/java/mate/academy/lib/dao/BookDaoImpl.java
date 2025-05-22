@@ -25,7 +25,7 @@ public class BookDaoImpl implements BookDao {
 
             int affectedRows = statement.executeUpdate();
 
-            if (affectedRows < 0) {
+            if (affectedRows == 0) {
                 throw new DataProcessingException("Rows were not inserted");
             }
 
